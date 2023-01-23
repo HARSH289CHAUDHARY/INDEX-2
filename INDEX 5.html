@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <div id="maindivID" class="maindivClass">
+        <h1>Events and Handlers</h1>
+        <p id="para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni minima id natus veritatis? Expedita, asperiores alias. Delectus illo vero quisquam ut corporis, possimus in deserunt quos! In rem nesciunt, eaque natus ipsam culpa minima!</p>
+        <input id="btn" type="button" value="Submit">
+
+        <p> The Current Date & Time is : <span id="timespan"> Current Date Time</span></p>
+
+    </div>
+    <script>
+        let paragraph = document.getElementById("para")
+        let button = document.getElementById("btn")
+
+        // button.onclick = function togglepara(){
+            
+        //     if(paragraph.style.display != "none"){
+        //         paragraph.style.display = "none"
+        //     }
+        //     else{
+        //         paragraph.style.display = "block"
+        //     }
+        // }
+
+        // button.onclick = function countno(){
+        //     for (let i=1; i<=10; i++){
+        //         console.log("Number " + i)
+        //     }
+        // }
+
+        // paragraph.addEventListener("mouseover", function test(){
+        //     console.log("mouse is over the paragraph")
+        // })
+
+        // paragraph.addEventListener("mouseout", function t(){
+        //     console.log("mouse is going away")
+        // })
+        
+        // function greet(){
+        //     console.log("Hello World", 1600) // Calling the function once after given time
+        // }
+
+        // let timeOut = setTimeout(greet, 1000)
+        // clearInterval(timeOut)
+
+        // let interval = setInterval(greet, 1000);
+        // clearInterval(interval)
+
+        function display(){
+            let timeDate= new Date();
+            console.log(timeDate);
+            document.getElementById("timespan").innerHTML = timeDate
+            document.getElementById("timespan").style.fontWeight = "bold"
+        }
+        setInterval(display,1)
+
+
+    </script>
+</body>
+</html>
